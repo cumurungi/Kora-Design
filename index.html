@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Mau Solution pairs homeowners with refined interior designers for beautifully tailored spaces."
+  />
+  <title>Kora Design | Interior Design, Curated</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Kora Design home">
+            <img src="assets/logo.png" alt="Kora Design Logo" class="brand-logo" />
+              <span class="brand-text">Kora Design</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li v-for="link in navLinks" :key="link.label">
+              <a :href="link.href">{{ link.label }}</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="contact.html" class="btn btn-secondary">Contact us</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="top" class="hero">
+  <div class="container hero-grid">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-copy">
+      <p class="eyebrow">Elevated interiors, thoughtfully matched</p>
+
+      <h1>
+        Find the right designer for a home that feels distinctly yours.
+      </h1>
+
+      <p class="hero-text">
+        Kora Design helps you discover accomplished interior designers,
+        compare aesthetics, and start your project with clarity and confidence.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#designers" class="btn btn-primary">Explore designers</a>
+        <a href="#how-it-works" class="btn btn-secondary">How it works</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>250+</h3>
+          <p>Vetted designers</p>
+        </div>
+        <div class="stat">
+          <h3>48 hrs</h3>
+          <p>Average match time</p>
+        </div>
+        <div class="stat">
+          <h3>4.9/5</h3>
+          <p>Client satisfaction</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-media">
+      <img src="assets/sofa.png" alt="Modern living room" />
+    </div>
+
+  </div>
+</section>
+
+      <section class="process-strip" aria-label="Design process overview">
+        <div class="container process-strip-inner">
+          <article class="process-item">
+            <div>
+              <span class="process-number">01</span>
+              <h2>Share your vision</h2>
+              <figure class="process-image">
+                <img src="assets/get.jpeg" alt="Share your vision" />
+              </figure>
+              <p>Tell us about your space, style preferences, and project goals.</p>
+            </div>
+          </article>
+
+          <article class="process-item">
+            <div>
+              <span class="process-number">02</span>
+              <h2>Get matched</h2>
+              <figure class="process-image">
+                <img src="assets/match.jpeg" alt="Get matched" />
+              </figure>
+              <p>We curate 3-5 designers whose work aligns with your vision.</p>
+            </div>
+          </article>
+
+          <article class="process-item">
+            <div>
+              <span class="process-number">03</span>
+              <h2>Connect & create</h2>
+              <figure class="process-image">
+                <img src="assets/sofa.png" alt="Connect & create" />
+              </figure>
+              <p>Meet your matches and begin your beautiful transformation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-it-works">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">A seamless path to your new space</p>
+            <h2 class="section-title">How Kora Design works</h2>
+            <p class="section-intro">
+              We make the search feel effortless, from your first style notes to your selected designer.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card" v-for="step in howItWorks" :key="step.title">
+              <figure class="step-image">
+                <img :src="step.image" :alt="step.alt" />
+              </figure>
+              <div class="step-card-content">
+                <p class="step-label">{{ step.label }}</p>
+                <h3>{{ step.title }}</h3>
+                <p>{{ step.text }}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="designers" class="featured-designers">
+        <div class="container">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">Featured designers</p>
+              <h2 class="section-title">Meet the design team</h2>
+            </div>
+            <a href="#cta" class="btn btn-secondary">Start your match</a>
+          </div>
+
+          <div class="designers-grid">
+            <article class="designer-card" v-for="designer in designers" :key="designer.name">
+              <figure class="designer-image">
+                <img :src="designer.image" :alt="designer.alt" />
+              </figure>
+              <div class="designer-card-body">
+                <div class="designer-meta">
+                  <p class="designer-location">{{ designer.location }}</p>
+                  <span class="designer-rating">★ {{ designer.rating }}</span>
+                </div>
+                <h3>{{ designer.name }}</h3>
+                <p class="designer-style">{{ designer.style }}</p>
+                <p>{{ designer.description }}</p>
+                <a href="#cta" class="text-link">View profile</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="image-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Design showcase</p>
+            <h2 id="gallery-title" class="section-title">Visual direction from our portfolio</h2>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item"><img src="assets/preferance.jpeg" alt="Designer project 1" /></figure>
+            <figure class="gallery-item"><img src="assets/2.jpeg" alt="Designer project 2" /></figure>
+            <figure class="gallery-item"><img src="assets/3.jpeg" alt="Designer project 3" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-labelledby="testimonial-title">
+        <div class="container testimonial-wrap">
+          <p class="eyebrow">Client stories</p>
+          <h2 id="testimonial-title" class="section-title">“The whole experience felt tailored, calm, and incredibly inspiring.”</h2>
+          <blockquote>
+            <p>
+              We were matched with a designer whose work felt exactly right for our home. Within days,
+              we had a clear direction, a beautiful concept, and complete confidence in the process.
+            </p>
+          </blockquote>
+          <p class="testimonial-author">Amelia & Jordan Reyes — Brooklyn townhouse renovation</p>
+        </div>
+      </section>
+
+      <section id="cta" class="cta-section">
+        <div class="container cta-inner">
+          <div class="cta-copy">
+            <p class="eyebrow">Begin your project</p>
+            <h2 class="section-title">Tell us about your space and we'll curate your best-fit designer.</h2>
+            <p>
+              Share your room goals, timeline, and preferred aesthetic. We'll introduce you to designers
+              who align with your vision and budget.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="mailto:hello@designconnect.com" class="btn btn-primary">hello@designconnect.com</a>
+            <a href="contact.html" class="btn btn-secondary">Contact us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="Kora Design home">
+            <img src="assets/logo.png" alt="Kora Design Logo" class="brand-logo" />
+              <span class="brand-text">Kora Design</span>
+        </a>
+          <p>A curated platform connecting discerning homeowners with exceptional interior designers.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <p class="footer-title">Explore</p>
+          <ul>
+            <li v-for="link in footerLinks" :key="link.label">
+              <a :href="link.href">{{ link.label }}</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer-social">
+          <p class="footer-title">Follow</p>
+          <ul>
+            <li v-for="social in socialLinks" :key="social.label">
+              <a :href="social.href" target="_blank" rel="noreferrer">{{ social.label }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© {{ currentYear }} Kora Design. All rights reserved.</p>
+        <p>Crafted for elevated living.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
