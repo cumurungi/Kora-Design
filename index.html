@@ -179,29 +179,29 @@
           <p>A curated platform connecting discerning homeowners with exceptional interior designers.</p>
         </div>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <p class="footer-title">Explore</p>
-          <ul>
-            <li v-for="link in footerLinks" :key="link.label">
-              <a :href="link.href">{{ link.label }}</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="footer-social">
-          <p class="footer-title">Follow</p>
-          <ul>
-            <li v-for="social in socialLinks" :key="social.label">
-              <a :href="social.href" target="_blank" rel="noreferrer">{{ social.label }}</a>
-            </li>
-          </ul>
-        </div>
+       <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-title">Explore</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="designers.html">Designers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <p class="footer-title">Follow</p>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
-
-      <div class="container footer-bottom">
-        <p>© {{ currentYear }} Kora Design. All rights reserved.</p>
-        <p>Crafted for elevated living.</p>
-      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Kora Design. All rights reserved.</p>
+      <p>Crafted for elevated living.</p>
+    </div>
     </footer>
   </div>
 
