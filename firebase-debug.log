@@ -1,0 +1,48 @@
+[debug] [2026-03-31T09:59:01.521Z] ----------------------------------------------------------------------
+[debug] [2026-03-31T09:59:01.529Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\25nga\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-03-31T09:59:01.530Z] CLI Version:   15.12.0
+[debug] [2026-03-31T09:59:01.530Z] Platform:      win32
+[debug] [2026-03-31T09:59:01.530Z] Node Version:  v22.15.0
+[debug] [2026-03-31T09:59:01.531Z] Time:          Tue Mar 31 2026 11:59:01 GMT+0200 (Central Africa Time)
+[debug] [2026-03-31T09:59:01.531Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Projects\KoraDesign
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-03-31T10:00:01.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-31T10:00:01.878Z] > authorizing via signed-in user (cumurungi9@gmail.com)
+[debug] [2026-03-31T10:00:01.880Z] Checked if tokens are valid: true, expires at: 1774954692472
+[debug] [2026-03-31T10:00:01.880Z] Checked if tokens are valid: true, expires at: 1774954692472
+[debug] [2026-03-31T10:00:01.882Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-03-31T10:00:04.137Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-03-31T10:00:04.137Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Hosting Setup
+[debug] [2026-03-31T10:00:07.944Z] Checked if tokens are valid: true, expires at: 1774954692472
+[debug] [2026-03-31T10:00:07.944Z] Checked if tokens are valid: true, expires at: 1774954692472
+[debug] [2026-03-31T10:00:07.944Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kora-design [none]
+[debug] [2026-03-31T10:00:08.630Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kora-design 200
+[debug] [2026-03-31T10:00:08.631Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kora-design {"projectId":"kora-design","projectNumber":"410344919846","displayName":"kora-design","name":"projects/kora-design","resources":{"hostingSite":"kora-design"},"state":"ACTIVE","etag":"1_6f69a0f3-31e4-4afa-8063-7409251100b3"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
