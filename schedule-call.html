@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Call | Mau Solution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Mau Solution home"><span class="brand-mark">MS</span><span class="brand-text">Mau Solution</span></a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="designers.html">Designers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="schedule-call.html">Schedule</a></li>
+        </ul>
+      </nav>
+      <a href="schedule-call.html" class="btn btn-secondary">Schedule a call</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 0;">
+    <section>
+      <div class="section-heading" style="text-align:left;">
+        <p class="eyebrow">Schedule a call</p>
+        <h1 class="section-title">Let’s plan your design kickoff</h1>
+        <p class="section-intro">Choose the best time and share your goals; we’ll align you with a designer who matches your style and timeline.</p>
+      </div>
+
+      <form id="scheduleForm" class="schedule-form">
+        <label>Name
+          <input type="text" name="Name" required>
+        </label>
+
+        <label>Email
+          <input type="email" name="Email" required>
+        </label>
+
+        <label>Phone
+          <input type="tel" name="Phone" placeholder="(123) 456-7890" required>
+        </label>
+
+        <label>Preferred designer
+          <select name="Designer">
+            <option value="elena">Elena Vasquez</option>
+            <option value="marcus">Marcus Chen</option>
+            <option value="sophia">Sophia Williams</option>
+            <option value="any">No preference</option>
+          </select>
+        </label>
+
+        <label>Preferred date
+          <input type="date" name="Date" required>
+        </label>
+
+        <label>Preferred time
+          <input type="time" name="Time" required>
+        </label>
+
+        <label>Project type
+          <select name="ProjectType" required>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="renovation">Renovation</option>
+            <option value="newbuild">New build</option>
+          </select>
+        </label>
+
+        <label>Brief description
+          <textarea name="Message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary">Submit request</button>
+      </form>
+
+      <div class="schedule-help" style="margin-top:1.5rem;">
+        <p>Prefer a direct call? Email <a href="mailto:hello@mausolution.com">hello@mausolution.com</a> or call <a href="tel:+12125551234">+1 (212) 555-1234</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('scheduleForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const msg = document.createElement('div');
+      msg.style.margin = '1rem 0';
+      msg.style.padding = '1rem';
+      msg.style.border = '1px solid #8b5a3c';
+      msg.style.borderRadius = '0.5rem';
+      msg.style.background = '#fff8ee';
+      msg.textContent = 'Thanks! Your scheduling request has been received. We will email you shortly with confirmation.';
+      this.parentNode.insertBefore(msg, this.nextSibling);
+      this.reset();
+    });
+  </script>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark">MS</span><span class="brand-text">Mau Solution</span></a>
+        <p>Connecting homeowners with exceptional interior designers.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-title">Explore</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="designers.html">Designers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="schedule-call.html">Schedule</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <p class="footer-title">Follow</p>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Mau Solution. All rights reserved.</p>
+      <p>Crafted for elevated living.</p>
+    </div>
+  </footer>
+</body>
+</html>
